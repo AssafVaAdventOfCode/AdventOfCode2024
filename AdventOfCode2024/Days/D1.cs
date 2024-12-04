@@ -14,7 +14,7 @@ public class D1 : AocDay
         var rhsGroup = new SortedDictionary<int, int>();
 
         var tuples = lines
-            .Select(line => line.Split(' ', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries))
+            .Select(line => line.SplitWhiteSpace())
             .Select(arr => (int.Parse(arr[0]), int.Parse(arr[1])));
 
         foreach (var (g1, g2) in tuples)
